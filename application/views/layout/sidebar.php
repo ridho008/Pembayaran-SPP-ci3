@@ -1,5 +1,5 @@
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="<?= base_url('dashboard'); ?>"><i class="fas fa-clinic-medical"></i> Klinik Doo</a>
+  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="<?= base_url('dashboard'); ?>"><i class="fas fa-school"></i> SPP MUDA</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -36,13 +36,13 @@
           </li>
           <li class="nav-item">
             <a class="nav-link<?= $this->uri->segment(2) == 'guru' ? ' active' : '' ?>" href="<?= base_url('admin/guru'); ?>">
-              <i class="fas fa-users"></i>
+              <i class="fas fa-user-friends"></i>
               Data Guru
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link<?= $this->uri->segment(2) == 'wali' ? ' active' : '' ?>" href="<?= base_url('admin/wali'); ?>">
-              <i class="fas fa-users"></i>
+              <i class="fas fa-user-tie"></i>
               Data Wali Kelas
             </a>
           </li>
@@ -54,7 +54,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link<?= $this->uri->segment(2) == 'transaksi' ? ' active' : '' ?>" href="<?= base_url('admin/transaksi'); ?>">
-              <i class="fas fa-users"></i>
+              <i class="fas fa-money-check-alt"></i>
               Transaksi
             </a>
           </li>
@@ -68,8 +68,8 @@
         </h6>
         <ul class="nav flex-column mb-2">
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('laporan/dokter'); ?>">
-              <i class="fas fa-notes-medical"></i>
+            <a class="nav-link<?= $this->uri->segment(2) == 'laporan' ? ' active' : '' ?>" href="<?= base_url('admin/laporan'); ?>">
+              <i class="fas fa-clipboard-list"></i>
               Laporan
             </a>
           </li>
