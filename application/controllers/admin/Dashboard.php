@@ -6,6 +6,7 @@ class Dashboard extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Auth_m');
+		cekSession();
 	}
 	
 	public function index()

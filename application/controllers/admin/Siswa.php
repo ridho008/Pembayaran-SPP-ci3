@@ -8,6 +8,7 @@ class Siswa extends CI_Controller {
 		$this->load->model('Siswa_m');
 		$this->load->model('Wali_m');
 		$this->load->model('Auth_m');
+		cekSession();
 	}
 
 	public function index()
@@ -78,7 +79,7 @@ class Siswa extends CI_Controller {
 					'jatuh_tempo' => $jatuhTempo,
 					'bulan' => $bulan,
 					'jml' => $biaya,
-					'id_user' => 1
+					'id_user' => $this->session->userdata('id_user')
 				];
 				$this->Siswa_m->insert('spp', $data);
 			}

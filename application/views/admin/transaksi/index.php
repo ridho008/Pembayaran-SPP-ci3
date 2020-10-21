@@ -11,9 +11,10 @@
     <div class="card-body">
       <div class="row">
         <div class="col-md-6">
+          <div class="alert alert-info" role="alert"><i class="fas fa-info"></i> Masukan NIS siswa yang sudah terdaftar untuk melihat pembayaran spp.</div>
           <?= form_open(''); ?>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="NIS Siswa..." name="nis">
+            <input type="text" class="form-control" placeholder="NIS Siswa..." name="nis" autofocus="on">
             <div class="input-group-append">
               <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
             </div>
@@ -80,7 +81,12 @@
                    <td><?= $s['jml']; ?></td>
                    <td><?= $s['ket']; ?></td>
                    <td>
+                    <?php if($s['no_bayar'] == null) : ?>
                      <a href="<?= base_url('admin/transaksi/bayar/' . $siswa['nis'] . '/' . $s['id_spp']); ?>" class="btn btn-info">Bayar</a>
+                     <?php else : ?>
+                      <a href="<?= base_url('admin/transaksi/batal/' . $siswa['nis'] . '/' . $s['id_spp']); ?>" class="btn btn-danger btn-sm">Batal</a>
+                      <a href="<?= base_url('admin/transaksi/cetak/' . $siswa['nis'] . '/' . $s['id_spp']); ?>" target="_blank" class="btn btn-sm">Cetak</a>
+                    <?php endif; ?>
                    </td>
                  </tr>
               <?php endforeach; ?>

@@ -17,7 +17,7 @@
       <div class="sidebar-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link<?= $this->uri->segment(1) == 'dashboard' ? ' active' : '' ?>" href="<?= base_url('dashboard'); ?>">
+            <a class="nav-link<?= $this->uri->segment(2) == 'dashboard' ? ' active' : '' ?>" href="<?= base_url('admin/dashboard'); ?>">
               <i class="fas fa-tachometer-alt"></i>
               Dashboard
             </a>
